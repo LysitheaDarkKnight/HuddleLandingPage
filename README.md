@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0/hub/huddle-landing-page-using-flexbox-and-scss-tk-ynVOOja)
 - Live Site URL: (https://lysitheadarkknight.github.io/HuddleLandingPage/)
 
 ## My process
