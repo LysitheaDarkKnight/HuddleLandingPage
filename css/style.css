@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-170%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(170%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+body {
+  background-color: hsl(257deg, 40%, 49%);
+  color: #fff;
+}
+body main {
+  position: relative;
+  min-height: 100vh;
+}
+body main .desktop, body main .mobile {
+  position: absolute;
+  z-index: -2;
+}
+body main .desktop {
+  min-height: 100vh;
+}
+body main .mobile {
+  display: none;
+}
+body main .container {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 30px;
+}
+body main .container .logo {
+  margin: 60px 0 110px 0;
+  width: 200px;
+}
+body main .container .showcase {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 60px;
+  overflow: hidden;
+}
+body main .container .showcase img {
+  animation: slideInFromLeft 1s ease-in-out;
+  width: 1900px;
+}
+body main .container .showcase__text {
+  animation: slideInFromRight 1s ease-in-out;
+}
+body main .container .showcase__text h1, body main .container .showcase__text p {
+  line-height: 1.4;
+}
+body main .container .showcase__text h1 {
+  padding: 45px 0;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+body main .container .showcase__text p, body main .container .showcase__text a {
+  font-family: "Open Sans", sans-serif;
+}
+body main .container .showcase__text p {
+  padding-bottom: 30px;
+}
+body main .container .showcase__text a {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(257deg, 40%, 49%);
+  background-color: #fff;
+  padding: 20px 70px;
+  border-radius: 40px;
+  box-shadow: 0 14px 28px rgba(55, 42, 88, 0.25), 0 10px 10px rgba(55, 42, 88, 0.22);
+  transition: transform 0.6s ease-in;
+  z-index: 1;
+}
+body main .container .showcase__text a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
+  z-index: -1;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+body main .container .showcase__text a:hover {
+  color: #fff;
+}
+body main .container .showcase__text a:hover:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+body main .container .social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: row;
+  margin: 25px 0;
+  gap: 20px;
+}
+body main .container .social a {
+  color: hsl(0deg, 1%, 100%);
+  border: 1px #ccc solid;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.6s ease-in;
+}
+body main .container .social a:hover {
+  color: hsl(300deg, 69%, 71%);
+  border: 1px hsl(300deg, 69%, 71%) solid;
+  transform: rotate(360deg);
+}
+
+@media (max-width: 1100px) {
+  body main .desktop {
+    display: none;
+  }
+  body main .mobile {
+    display: inline-block;
+    width: 100%;
+  }
+  body main .container .showcase {
+    flex-direction: column;
+    text-align: center;
+    overflow: visible;
+  }
+  body main .container .showcase__text h1 {
+    font-size: 1.5rem;
+  }
+  body main .container .showcase__text a {
+    padding: 15px 80px;
+    border-radius: 40px;
+    box-shadow: 0 14px 28px rgba(55, 42, 88, 0.25), 0 10px 10px rgba(55, 42, 88, 0.22);
+  }
+  body main .container .social {
+    justify-content: center;
+    margin-top: 75px;
+  }
+}/*# sourceMappingURL=style.css.map */
